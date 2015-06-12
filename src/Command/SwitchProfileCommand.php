@@ -18,8 +18,7 @@ class SwitchProfileCommand extends Command
     {
         $this->setName('switch')
             ->addArgument('profileName', InputArgument::REQUIRED)
-            ->setDescription('Switches the settings from files located in the profile name that you type')
-        ;
+            ->setDescription('Switches the settings from files located in the profile name that you type');
 
     }
 

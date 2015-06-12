@@ -13,8 +13,7 @@ class InstallerCommand extends Command
     protected function configure()
     {
         $this->setName('install')
-        ->setDescription('Install the settings file for switching profiles')
-        ;
+            ->setDescription('Install the settings file for switching profiles');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
