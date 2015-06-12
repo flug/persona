@@ -10,7 +10,8 @@ class AppKernel
     {
         return [
             new Persona\Command\InstallerCommand(),
-            new Persona\Command\SwitchProfileCommand()
+            new Persona\Command\SwitchProfileCommand(),
+            new Persona\Command\AddProfileCommand(),
         ];
     }
 
@@ -23,7 +24,7 @@ class AppKernel
         'file_settings' => '{$directory_settings}/switcher.json',
         'profiles_directory' => '{$home}/profiles',
         'settings_dist' => '{$rootKernel}/settings.json.dist',
-        'version' => '1.0.0@alpha',
+        'version' => '1.1.0@alpha',
         'name' => 'Persona'
 
     ];
