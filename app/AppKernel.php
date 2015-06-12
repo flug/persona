@@ -20,7 +20,7 @@ class AppKernel
     public static $defaultConfig = [
 
         'directory_settings' => '{$home}/.switcher',
-        'file_settings' => '{$directory_settings}/switter.json',
+        'file_settings' => '{$directory_settings}/switcher.json',
         'profiles_directory' => '{$home}/profiles',
         'settings_dist' => '{$rootKernel}/settings.json.dist',
         'version' => '1.0.0@alpha',
