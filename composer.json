@@ -1,0 +1,29 @@
+{
+  "name": "flug/switch",
+  "description": "a dissociative identity disorder for you configuration files",
+  "type": "project",
+  "require": {
+    "symfony/console": "^3.0@dev",
+    "symfony/filesystem": "^3.0@dev",
+    "symfony/finder": "^3.0@dev"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Flug",
+      "email": "flugv1@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Persona\\": "src/"
+    }
+  },
+  "bin": ["bin/switcher"],
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  },
+  "minimum-stability": "dev"
+}

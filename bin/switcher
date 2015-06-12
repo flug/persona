@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__.'/../vendor/autoload.php';
+
+require __DIR__.'/../app/AppKernel.php';
+
+use Symfony\Component\Console\Application;
+
+$kernel = new AppKernel();
+$application = new Application();
+$application->addCommands($kernel->loadCommands());
+$application->setVersion($kernel->get('version'));
+$application->setName($kernel->get('name'));
+$application->run();
