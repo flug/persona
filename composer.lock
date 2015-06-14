@@ -4,8 +4,54 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8358c87c238c6b451d1d190e16266d43",
+    "hash": "a6b73f729b05c6f917041b52af6fc69c",
     "packages": [
+        {
+            "name": "seld/jsonlint",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/jsonlint.git",
+                "reference": "c31911c75a45cd0cd1f780bb24084cb67cbd5647"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/c31911c75a45cd0cd1f780bb24084cb67cbd5647",
+                "reference": "c31911c75a45cd0cd1f780bb24084cb67cbd5647",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "bin": [
+                "bin/jsonlint"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Seld\\JsonLint\\": "src/Seld/JsonLint/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "JSON Linter",
+            "keywords": [
+                "json",
+                "linter",
+                "parser",
+                "validator"
+            ],
+            "time": "2015-03-04 15:41:16"
+        },
         {
             "name": "symfony/console",
             "version": "dev-master",
@@ -218,10 +264,13 @@
         "symfony/console": 20,
         "symfony/filesystem": 20,
         "symfony/finder": 20,
-        "symfony/process": 20
+        "symfony/process": 20,
+        "seld/jsonlint": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=5.3.2"
+    },
     "platform-dev": []
 }
