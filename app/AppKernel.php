@@ -8,12 +8,29 @@ class AppKernel
      */
     public function loadCommands()
     {
-        return [
+        $commands = [
             new Persona\Command\InstallerCommand(),
-            new Persona\Command\SwitchProfileCommand(),
-            new Persona\Command\AddProfileCommand(),
         ];
+        if($this->settingsFileExist()){
+            $commands  += [
+                new Persona\Command\SwitchProfileCommand(),
+                new Persona\Command\AddProfileCommand(),
+            ];
+        }
+
+
+        return $commands;
     }
+
+
+    private function settingsFileExist()
+    {
+        if(!(new \Symfony\Component\Filesystem\Filesystem())->exists($this->get('file_settings'))){
+            return false;
+        }
+        return true;
+    }
+
 
     /**
      * @var array
