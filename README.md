@@ -5,7 +5,7 @@ For Linux only if you are a mac user it is at your own risk ^^
 
 ##Download persona.phar
    
-    wget https://github.com/flug/persona/releases/download/1.0.0%40alpha/persona.phar
+    wget https://github.com/flug/persona/releases/download/1.1.1%40alpha/persona.phar
     
 And move to environment
      
