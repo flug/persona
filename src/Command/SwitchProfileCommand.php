@@ -5,6 +5,7 @@ namespace Persona\Command;
 
 use Persona\Command;
 use Persona\Exception\InvalidParametersException;
+use Persona\Json\JsonFile;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -41,7 +42,7 @@ class SwitchProfileCommand extends Command
         foreach (['files', 'directories'] as $type) {
             $this->createSymlink($fs, $finder, $type);
         }
-        $this->updateSettings($fs, $profileName);
+        $this->updateSettings($profileName);
     }
 
     private function createSymlink(Filesystem $fs, Finder $finder, $type = 'files')
@@ -58,10 +59,11 @@ class SwitchProfileCommand extends Command
         }
     }
 
-    private function updateSettings(Filesystem $fs, $profileName)
+    private function updateSettings($profileName)
     {
         $settings = $this->get('settings');
         $settings['current_profile'] = $profileName;
-        $fs->dumpFile($this->get('file_settings'), json_encode($settings));
+        $updateSettings = new JsonFile($this->get('file_settings'));
+        $updateSettings->write($settings);
     }
 }

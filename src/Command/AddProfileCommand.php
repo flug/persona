@@ -5,6 +5,7 @@ namespace Persona\Command;
 
 
 use Persona\Command;
+use Persona\Json\JsonFile;
 use Persona\Manager\ProfileManager;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -46,7 +47,8 @@ class AddProfileCommand extends Command
             'repository' => $repository
         ];
 
-        $fs->dumpFile($this->get('file_settings'), json_encode($settings));
+        $updateSettings = new JsonFile($this->get('file_settings'));
+        $updateSettings->write($settings);
     }
 
 }

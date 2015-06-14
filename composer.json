@@ -6,7 +6,8 @@
     "symfony/console": "^3.0@dev",
     "symfony/filesystem": "^3.0@dev",
     "symfony/finder": "^3.0@dev",
-    "symfony/process": "^3.0@dev"
+    "symfony/process": "^3.0@dev",
+    "seld/jsonlint": "dev-master"
   },
   "license": "MIT",
   "authors": [

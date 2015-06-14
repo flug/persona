@@ -3,6 +3,7 @@
 namespace Persona\Command;
 
 use Persona\Command;
+use Persona\Json\JsonFile;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\Question;
@@ -36,7 +37,8 @@ class InstallerCommand extends Command
             $userSettings[$key] = $response;
         }
 
-        $fs->dumpFile($this->get('file_settings'), json_encode($userSettings));
+        $updateSettings = new JsonFile($this->get('file_settings'));
+        $updateSettings->write($userSettings);
     }
 
 }

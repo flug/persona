@@ -52,7 +52,7 @@ class AppKernel
 
     private function settingsFileExist()
     {
-        if(!(new \Symfony\Component\Filesystem\Filesystem())->exists($this->get('file_settings'))){
+        if (!(new \Persona\Json\JsonFile($this->get('file_settings')))->exists()) {
             return false;
         }
         return true;
@@ -74,7 +74,7 @@ class AppKernel
                 return __DIR__ ;
                 break;
             case 'settings':
-                return json_decode(file_get_contents($this->get('file_settings')), true);
+                return (new \Persona\Json\JsonFile($this->get('file_settings')))->read();
                 break;
             default:
             case 'directory_settings':
