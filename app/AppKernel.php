@@ -39,11 +39,12 @@ class AppKernel
         $commands = [
             new Persona\Command\InstallerCommand(),
         ];
-        if($this->settingsFileExist()){
-            $commands  += [
-                new Persona\Command\SwitchProfileCommand(),
-                new Persona\Command\AddProfileCommand(),
-            ];
+        if ($this->settingsFileExist()) {
+            $commands = array_merge([
+                    new Persona\Command\SwitchProfileCommand(),
+                    new Persona\Command\AddProfileCommand(),
+                ], $commands);
+
         }
 
         return $commands;
