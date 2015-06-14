@@ -71,7 +71,7 @@ class AppKernel
                 return rtrim(getenv('HOME') ?: getenv('USERPROFILE'), '/\\');
                 break;
             case 'rootKernel':
-                return __DIR__ ;
+                return __DIR__;
                 break;
             case 'settings':
                 return (new \Persona\Json\JsonFile($this->get('file_settings')))->read();
@@ -81,7 +81,7 @@ class AppKernel
             case 'profiles_directory':
             case 'file_settings':
                 return $this->process($this->config[$key], $flags);
-            break;
+                break;
         }
     }
 
