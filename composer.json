@@ -3,6 +3,7 @@
   "description": "a dissociative identity disorder for you configuration files",
   "type": "project",
   "require": {
+    "php": ">=5.3.2",
     "symfony/console": "^3.0@dev",
     "symfony/filesystem": "^3.0@dev",
     "symfony/finder": "^3.0@dev",
