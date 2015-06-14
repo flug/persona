@@ -18,7 +18,6 @@ class AppKernel
             ];
         }
 
-
         return $commands;
     }
 
