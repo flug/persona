@@ -4,6 +4,34 @@ class AppKernel
 {
 
     /**
+     * @var array
+     */
+    public static $defaultConfig = [
+
+        'directory_settings' => '{$home}/.switcher',
+        'file_settings' => '{$directory_settings}/switcher.json',
+        'profiles_directory' => '{$home}/profiles',
+        'settings_dist' => '{$rootKernel}/settings.json.dist',
+        'version' => '1.1.0@alpha',
+        'name' => 'Persona'
+
+    ];
+    private $config;
+
+    public function __construct()
+    {
+        $this->config = static::$defaultConfig;
+    }
+
+    /**
+     * @return static
+     */
+    public static function getInstance()
+    {
+        return new static();
+    }
+
+    /**
      * @return array of Command
      */
     public function loadCommands()
@@ -21,7 +49,6 @@ class AppKernel
         return $commands;
     }
 
-
     private function settingsFileExist()
     {
         if(!(new \Symfony\Component\Filesystem\Filesystem())->exists($this->get('file_settings'))){
@@ -29,28 +56,6 @@ class AppKernel
         }
         return true;
     }
-
-
-    /**
-     * @var array
-     */
-    public static $defaultConfig = [
-
-        'directory_settings' => '{$home}/.switcher',
-        'file_settings' => '{$directory_settings}/switcher.json',
-        'profiles_directory' => '{$home}/profiles',
-        'settings_dist' => '{$rootKernel}/settings.json.dist',
-        'version' => '1.1.0@alpha',
-        'name' => 'Persona'
-
-    ];
-
-    public function __construct()
-    {
-        $this->config = static::$defaultConfig;
-    }
-
-    private $config;
 
     /**
      * @param $key
@@ -77,14 +82,6 @@ class AppKernel
                 return $this->process($this->config[$key], $flags);
             break;
         }
-    }
-
-    /**
-     * @return static
-     */
-    public static function getInstance()
-    {
-        return new static();
     }
 
     /**
