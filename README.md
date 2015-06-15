@@ -16,7 +16,7 @@ And move to environment
     persona install 
     
 
-Add you profile directory in directory settings 
+Add your profile directory in directory settings 
 
     ~/profiles/profile1 
     ~/profiles/profile2 
