@@ -58,12 +58,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "933b399db70e54ee472ef03b7f96c468003c4e03"
+                "reference": "6fb9d5a32d3330b9dd598587c52bac6fbca193fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/933b399db70e54ee472ef03b7f96c468003c4e03",
-                "reference": "933b399db70e54ee472ef03b7f96c468003c4e03",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/6fb9d5a32d3330b9dd598587c52bac6fbca193fe",
+                "reference": "6fb9d5a32d3330b9dd598587c52bac6fbca193fe",
                 "shasum": ""
             },
             "require": {
@@ -107,7 +107,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2015-06-11 17:39:49"
+            "time": "2015-06-19 15:19:52"
         },
         {
             "name": "symfony/filesystem",
@@ -115,12 +115,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Filesystem.git",
-                "reference": "80a0bc4be4c2b037909e9e1a3abefd293a17a1a2"
+                "reference": "24fc9ecf8ed33772e0744397ba976cae95240a3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/80a0bc4be4c2b037909e9e1a3abefd293a17a1a2",
-                "reference": "80a0bc4be4c2b037909e9e1a3abefd293a17a1a2",
+                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/24fc9ecf8ed33772e0744397ba976cae95240a3b",
+                "reference": "24fc9ecf8ed33772e0744397ba976cae95240a3b",
                 "shasum": ""
             },
             "require": {
@@ -156,7 +156,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2015-05-16 13:09:29"
+            "time": "2015-06-18 16:25:07"
         },
         {
             "name": "symfony/finder",
@@ -164,12 +164,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Finder.git",
-                "reference": "27f023c07c6f798ef5153eca04fcf107c561a20f"
+                "reference": "630267c694e21272d4f724ed8816adc51f4d72bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Finder/zipball/27f023c07c6f798ef5153eca04fcf107c561a20f",
-                "reference": "27f023c07c6f798ef5153eca04fcf107c561a20f",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/630267c694e21272d4f724ed8816adc51f4d72bf",
+                "reference": "630267c694e21272d4f724ed8816adc51f4d72bf",
                 "shasum": ""
             },
             "require": {
@@ -205,7 +205,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2015-06-04 20:30:47"
+            "time": "2015-06-18 16:25:07"
         },
         {
             "name": "symfony/process",
