@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/jsonlint.git",
-                "reference": "42ae79eba5bf87cc8b6f6194008461dc837dbce8"
+                "reference": "249040cd409b1ca117a6f243d0f7f6b6e76d8fd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/42ae79eba5bf87cc8b6f6194008461dc837dbce8",
-                "reference": "42ae79eba5bf87cc8b6f6194008461dc837dbce8",
+                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/249040cd409b1ca117a6f243d0f7f6b6e76d8fd2",
+                "reference": "249040cd409b1ca117a6f243d0f7f6b6e76d8fd2",
                 "shasum": ""
             },
             "require": {
@@ -51,7 +51,7 @@
                 "parser",
                 "validator"
             ],
-            "time": "2015-11-25 10:53:45"
+            "time": "2016-08-01 13:04:30"
         },
         {
             "name": "symfony/console",
@@ -59,12 +59,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "4d18e4f2f164f18b52794f14d58e4fb40d85f167"
+                "reference": "d0d9bd5423a1be36d3338c15455184fed6de232d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/4d18e4f2f164f18b52794f14d58e4fb40d85f167",
-                "reference": "4d18e4f2f164f18b52794f14d58e4fb40d85f167",
+                "url": "https://api.github.com/repos/symfony/console/zipball/d0d9bd5423a1be36d3338c15455184fed6de232d",
+                "reference": "d0d9bd5423a1be36d3338c15455184fed6de232d",
                 "shasum": ""
             },
             "require": {
@@ -74,17 +74,19 @@
             "require-dev": {
                 "psr/log": "~1.0",
                 "symfony/event-dispatcher": "~2.8|~3.0",
+                "symfony/filesystem": "~2.8|~3.0",
                 "symfony/process": "~2.8|~3.0"
             },
             "suggest": {
                 "psr/log": "For using the console logger",
                 "symfony/event-dispatcher": "",
+                "symfony/filesystem": "",
                 "symfony/process": ""
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev"
+                    "dev-master": "3.2-dev"
                 }
             },
             "autoload": {
@@ -111,7 +113,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2016-04-12 18:27:47"
+            "time": "2016-09-06 11:07:23"
         },
         {
             "name": "symfony/filesystem",
@@ -119,12 +121,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "5751e80d6f94b7c018f338a4a7be0b700d6f3058"
+                "reference": "f16eed71fc31c4d2c186f2dd196db14d146fb3fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/5751e80d6f94b7c018f338a4a7be0b700d6f3058",
-                "reference": "5751e80d6f94b7c018f338a4a7be0b700d6f3058",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/f16eed71fc31c4d2c186f2dd196db14d146fb3fc",
+                "reference": "f16eed71fc31c4d2c186f2dd196db14d146fb3fc",
                 "shasum": ""
             },
             "require": {
@@ -133,7 +135,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev"
+                    "dev-master": "3.2-dev"
                 }
             },
             "autoload": {
@@ -160,7 +162,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2016-04-12 18:27:47"
+            "time": "2016-09-06 11:07:23"
         },
         {
             "name": "symfony/finder",
@@ -168,12 +170,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "c3e7b8a86d3044a3dff2cc5a89f2c523ccf0e0fb"
+                "reference": "ad1b54ed6b5d43255a34aab009a25fd368e0f417"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/c3e7b8a86d3044a3dff2cc5a89f2c523ccf0e0fb",
-                "reference": "c3e7b8a86d3044a3dff2cc5a89f2c523ccf0e0fb",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/ad1b54ed6b5d43255a34aab009a25fd368e0f417",
+                "reference": "ad1b54ed6b5d43255a34aab009a25fd368e0f417",
                 "shasum": ""
             },
             "require": {
@@ -182,7 +184,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev"
+                    "dev-master": "3.2-dev"
                 }
             },
             "autoload": {
@@ -209,7 +211,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2016-03-10 11:16:56"
+            "time": "2016-08-26 12:08:28"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -217,12 +219,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "6bab34bbffa5f5ac079fdc4a68e143f158e87b7d"
+                "reference": "53ad9faffe141fbe8f98cd6a7fd9a5e84513f56c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/6bab34bbffa5f5ac079fdc4a68e143f158e87b7d",
-                "reference": "6bab34bbffa5f5ac079fdc4a68e143f158e87b7d",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/53ad9faffe141fbe8f98cd6a7fd9a5e84513f56c",
+                "reference": "53ad9faffe141fbe8f98cd6a7fd9a5e84513f56c",
                 "shasum": ""
             },
             "require": {
@@ -234,7 +236,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "1.2-dev"
                 }
             },
             "autoload": {
@@ -268,7 +270,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-04-15 07:04:29"
+            "time": "2016-08-30 17:06:17"
         },
         {
             "name": "symfony/process",
@@ -276,12 +278,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "1574f3451b40fa9bbae518ef71d19a56f409cac0"
+                "reference": "7f20312aa0c870e583db353cc2e9759edbdc3873"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/1574f3451b40fa9bbae518ef71d19a56f409cac0",
-                "reference": "1574f3451b40fa9bbae518ef71d19a56f409cac0",
+                "url": "https://api.github.com/repos/symfony/process/zipball/7f20312aa0c870e583db353cc2e9759edbdc3873",
+                "reference": "7f20312aa0c870e583db353cc2e9759edbdc3873",
                 "shasum": ""
             },
             "require": {
@@ -290,7 +292,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev"
+                    "dev-master": "3.2-dev"
                 }
             },
             "autoload": {
@@ -317,7 +319,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2016-04-12 19:11:33"
+            "time": "2016-09-06 11:07:23"
         }
     ],
     "packages-dev": [],
