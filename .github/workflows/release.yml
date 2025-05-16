@@ -2,18 +2,12 @@ name: Release
 
 on:
   push:
-    branches:
-      - trunk
-    tags:
-      - 'v*'
+    branches: [trunk]
+    tags: ['v*']
   pull_request:
-    branches:
-      - trunk
-    branches-ignore:
-      - main
+    branches: [trunk]
 
 env:
-  # Configuration du versionnement sémantique
   MAJOR_LABELS: "breaking"
   MINOR_LABELS: "enhancement,feat"
   PATCH_LABELS: "bugfix,fix"
@@ -24,7 +18,6 @@ jobs:
   release:
     runs-on: ubuntu-latest
     env:
-      # Configuration du versionnement sémantique
       MAJOR_LABELS: "breaking"
       MINOR_LABELS: "enhancement,feat"
       PATCH_LABELS: "bugfix,fix"
@@ -39,7 +32,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       with:
-        fetch-depth: 0  # Pour récupérer l'historique complet
+        fetch-depth: 0
 
     - name: Set up Go
       uses: actions/setup-go@v4
@@ -49,7 +42,6 @@ jobs:
     - name: Get Current Version
       id: version
       run: |
-        # Si le fichier VERSION existe, on utilise sa version
         if [ -f ${{ env.VERSION_FILE }} ]; then
           echo "CURRENT_VERSION=$(cat ${{ env.VERSION_FILE }})" >> $GITHUB_OUTPUT
         else
@@ -77,15 +69,12 @@ jobs:
         TAGS=${{ steps.tags.outputs.TAGS }}
         LABELS=${{ steps.labels.outputs.LABELS }}
         
-        # Si on a des tags, on utilise la dernière version
         if [ -n "$TAGS" ]; then
           CURRENT_VERSION=$TAGS
         fi
         
-        # Par défaut, on fait une version PATCH
         TYPE="patch"
         
-        # Si on a des labels, on détermine le type de version
         if [ -n "$LABELS" ]; then
           if echo "$LABELS" | grep -qE "(${{ env.MAJOR_LABELS }})"; then
             TYPE="major"
@@ -94,12 +83,10 @@ jobs:
           fi
         fi
         
-        # Extraire les numéros de version
         MAJOR=$(echo $CURRENT_VERSION | cut -d. -f1)
         MINOR=$(echo $CURRENT_VERSION | cut -d. -f2)
         PATCH=$(echo $CURRENT_VERSION | cut -d. -f3)
         
-        # Calculer la nouvelle version
         case $TYPE in
           major)
             MAJOR=$((MAJOR + 1))
@@ -124,12 +111,10 @@ jobs:
 
     - name: Create Release
       id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: softprops/action-gh-release@v1
       with:
         tag_name: v${{ steps.next_version.outputs.NEXT_VERSION }}
-        release_name: Release v${{ steps.next_version.outputs.NEXT_VERSION }}
+        name: Release v${{ steps.next_version.outputs.NEXT_VERSION }}
         body: |
           ## Changelog
           
