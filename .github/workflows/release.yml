@@ -2,8 +2,15 @@ name: Release
 
 on:
   push:
+    branches:
+      - trunk
     tags:
-      - 'v*'
+      - 'v*'  # Active le workflow pour les tags commençant par v
+  pull_request:
+    branches:
+      - trunk
+    branches-ignore:
+      - main
 
 jobs:
   release:
