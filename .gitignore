@@ -28,7 +28,7 @@ vendor/
 coverage.txt
 
 # Configuration
-~/.persona2/
+~/.persona/
 
 # Test
 *.test
