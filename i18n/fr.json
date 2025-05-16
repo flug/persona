@@ -1,0 +1,91 @@
+{
+    "init": {
+        "description": "Initialiser la configuration de Persona2",
+        "help": "Initialiser la configuration de Persona2 en créant le fichier de configuration par défaut.\nSi le fichier existe déjà, il ne sera pas modifié.\n\nUtilisez l'option --force pour forcer la réinitialisation de la configuration.",
+        "success": "Configuration initialisée avec succès: %s",
+        "exists": "Le fichier de configuration existe déjà: %s",
+        "exists_force": "La configuration existe déjà à %s. Utilisez --force pour écraser",
+        "error_dir": "Erreur lors de la création du dossier de configuration: %v",
+        "error_file": "Erreur lors de la création du fichier de configuration: %v",
+        "force_flag": "Forcer la réinitialisation de la configuration",
+        "select_language": "Choisissez votre langue préférée:",
+        "prompt_choice": "Choisissez une langue (1-%d): ",
+        "invalid_choice": "Choix invalide. Veuillez choisir un numéro entre 1 et %d."
+    },
+    "add": {
+        "description": "Ajouter un nouveau profil",
+        "help": "Ajouter un nouveau profil en clonant un repository Git.\nLe nom du profil peut être extrait de l'URL si non fourni.",
+        "success": "Profil ajouté avec succès: %s",
+        "error_exists": "Un profil avec ce nom existe déjà",
+        "error_clone": "Erreur lors du clonage du repository: %v",
+        "error_config": "Erreur lors de la sauvegarde de la configuration: %v",
+        "url_required": "Le paramètre --url est requis",
+        "error_dir": "Erreur lors de la création du dossier: %v",
+        "error_profile": "Un profil avec le nom '%s' existe déjà"
+    },
+    "list": {
+        "description": "Lister les profils disponibles",
+        "help": "Lister tous les profils disponibles et leurs informations",
+        "title": "Profils disponibles:",
+        "current": "\nProfil actuel: %s",
+        "profile_info": "- %s (%s)",
+        "aliases": "  Alias: %v"
+    },
+    "switch": {
+        "description": "Changer de profil",
+        "help": "Changer de profil et créer des liens symboliques vers ses fichiers de configuration",
+        "success": "Changement de profil effectué: %s",
+        "error_not_found": "Profil non trouvé: %s",
+        "error_switch": "Erreur lors du changement de profil: %v"
+    },
+    "remove": {
+        "description": "Supprimer un profil",
+        "help": "Supprimer un profil et ses liens symboliques",
+        "confirm": "Êtes-vous sûr de vouloir supprimer le profil '%s'? (o/n)",
+        "success": "Profil supprimé avec succès: %s",
+        "error_not_found": "Profil non trouvé: %s",
+        "error_remove": "Erreur lors de la suppression du profil: %v",
+        "profile_required": "Le paramètre --profile est requis",
+        "error_removing_links": "Erreur lors de la suppression des liens: %v",
+        "error_removing_directory": "Erreur lors de la suppression du dossier: %v",
+        "error_saving_configuration": "Erreur lors de la sauvegarde de la configuration: %v",
+        "switch_prompt": "\nVoulez-vous changer de profil ?",
+        "switch_prompt_2": "0) Non, ne pas changer de profil",
+        "switch_prompt_3": "0) Non, ne pas changer de profil",
+        "choice": "Votre choix: ",
+        "switching_to_profile": "\nChangement vers le profil '%s'...",
+        "error_switching_profile": "Erreur lors du changement de profil: %v"
+    },
+    "update": {
+        "description": "Mettre à jour les profils",
+        "help": "Mettre à jour tous les profils ou un profil spécifique depuis leurs repositories",
+        "success": "Profil mis à jour avec succès: %s",
+        "error_fetch": "Erreur lors du fetch du repository: %v",
+        "error_pull": "Erreur lors du pull du repository: %v",
+        "fetching": "Mise à jour du profil '%s'...",
+        "fetching_remote": "Erreur lors de la récupération du remote: %w",
+        "fetching_worktree": "Erreur lors de l'obtention du worktree: %w",
+        "already_up_to_date": "Le profil '%s' est déjà à jour"
+    },
+    "self_update": {
+        "description": "Mettre à jour Persona2 vers la dernière version",
+        "long_description": "Télécharge et installe la dernière version de Persona2 depuis GitHub.",
+        "error_check_version": "Erreur lors de la vérification de la version: %v",
+        "error_download": "Erreur lors du téléchargement de la nouvelle version: %v",
+        "error_remove_old": "Erreur lors de la suppression de l'ancienne version: %v",
+        "error_rename": "Erreur lors du renommage du nouveau binaire: %v",
+        "up_to_date": "Vous utilisez déjà la dernière version: %s",
+        "found_update": "Une nouvelle version est disponible: %s -> %s",
+        "success": "Mise à jour réussie vers la version %s"
+    },
+    "common": {
+        "description": "Gestionnaire de profils Git",
+        "long_description": "Persona2 est un gestionnaire de profils Git qui permet de gérer différents profils en clonant des repositories.\nLes profils peuvent être facilement commutés et mis à jour.",
+        "config_file": "chemin vers le fichier de configuration",
+        "profile": "Nom du profil",
+        "url": "URL du repository Git",
+        "force": "Forcer",
+        "yes": "o",
+        "no": "n"
+    }
+}

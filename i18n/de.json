@@ -1,0 +1,77 @@
+{
+    "init": {
+        "description": "Initialisiert die Konfiguration",
+        "help": "Initialisiert die Konfiguration durch Erstellen der Standard-Konfigurationsdatei.\nWenn die Datei bereits existiert, wird sie nicht geändert.\n\nVerwenden Sie die Option --force, um die Konfiguration zu überschreiben.",
+        "exists": "Die Konfigurationsdatei existiert bereits: %s",
+        "exists_force": "Die Konfiguration existiert bereits unter %s. Verwenden Sie --force, um zu überschreiben",
+        "error_dir": "Fehler beim Erstellen des Konfigurationsverzeichnisses: %v",
+        "error_file": "Fehler beim Erstellen der Konfigurationsdatei: %v",
+        "force_flag": "Konfiguration überschreiben",
+        "select_language": "Bitte wählen Sie Ihre bevorzugte Sprache:",
+        "prompt_choice": "Bitte wählen Sie eine Zahl zwischen 1 und %d:",
+        "invalid_choice": "Ungültige Auswahl. Bitte wählen Sie eine Zahl zwischen 1 und %d.",
+        "success": "Konfiguration erfolgreich erstellt: %s"
+    },
+    "add": {
+        "description": "Fügt ein neues Profil hinzu",
+        "help": "Fügt ein neues Profil hinzu, indem ein Git-Repository geklont wird.\nDer Profilname kann aus der URL extrahiert werden, wenn nicht angegeben.",
+        "success": "Profil erfolgreich hinzugefügt: %s",
+        "error_exists": "Ein Profil mit diesem Namen existiert bereits",
+        "error_clone": "Fehler beim Klonen des Repositorys: %v",
+        "error_config": "Fehler beim Speichern der Konfiguration: %v",
+        "error_dir": "Fehler beim Erstellen des Verzeichnisses: %v",
+        "error_profile": "Ein Profil mit dem Namen '%s' existiert bereits",
+        "url_required": "Der Parameter --url ist erforderlich"
+    },
+    "list": {
+        "description": "Listet verfügbare Profile auf",
+        "help": "Listet alle verfügbaren Profile und ihre Informationen auf",
+        "title": "Verfügbare Profile:",
+        "current": "\nAktuelles Profil: %s",
+        "profile_info": "- %s (%s)",
+        "aliases": "  Aliase: %v"
+    },
+    "switch": {
+        "description": "Wechselt zu einem Profil",
+        "help": "Wechselt zu einem Profil und erstellt symbolische Links zu den Konfigurationsdateien",
+        "success": "Profil erfolgreich gewechselt: %s",
+        "error_not_found": "Profil nicht gefunden: %s",
+        "error_switch": "Fehler beim Wechseln des Profils: %v"
+    },
+    "remove": {
+        "description": "Entfernt ein Profil",
+        "help": "Entfernt ein Profil und seine symbolischen Links",
+        "confirm": "Sind Sie sicher, dass Sie das Profil '%s' entfernen möchten? (j/n)",
+        "success": "Profil erfolgreich entfernt: %s",
+        "error_not_found": "Profil nicht gefunden: %s",
+        "error_remove": "Fehler beim Entfernen des Profils: %v"
+    },
+    "update": {
+        "description": "Aktualisiert Profile aus ihren Repositories",
+        "help": "Aktualisiert alle Profile oder ein spezifisches Profil aus ihren Repositories",
+        "success": "Profil erfolgreich aktualisiert: %s",
+        "error_fetch": "Fehler beim Fetchen des Repositorys: %v",
+        "error_pull": "Fehler beim Pullen des Repositorys: %v"
+    },
+    "self_update": {
+        "description": "Aktualisiert sich selbst",
+        "long_description": "Lädt und installiert die neueste Version von Persona2 von GitHub.",
+        "error_check_version": "Fehler beim Überprüfen der Version: %v",
+        "error_download": "Fehler beim Herunterladen der neuen Version: %v",
+        "error_remove_old": "Fehler beim Entfernen der alten Version: %v",
+        "error_rename": "Fehler beim Umbenennen der neuen Version: %v",
+        "up_to_date": "Sie verwenden bereits die neueste Version: %s",
+        "found_update": "Neue Version verfügbar: %s → %s",
+        "success": "Erfolgreich aktualisiert auf Version %s"
+    },
+    "common": {
+        "description": "Git Profil Manager",
+        "long_description": "Persona2 ist ein Git-Profil-Manager, der verschiedene Profile durch Klonen von Repositories verwaltet.\nProfile können einfach gewechselt und aktualisiert werden.",
+        "config_file": "Pfad zur Konfigurationsdatei",
+        "profile": "Profilname",
+        "url": "Git Repository URL",
+        "force": "Überschreiben",
+        "yes": "j",
+        "no": "n"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "profiles": [
+        {
+            "name": "Travail",
+            "email": "travail@example.com"
+        },
+        {
+            "name": "Personnel",
+            "email": "perso@example.com"
+        }
+    ],
+    "current": "Travail",
+    "language": "en"
+}

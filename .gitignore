@@ -1,0 +1,52 @@
+# Go
+*.exe
+*.test
+*.prof
+*.out
+*.so
+*.a
+*.o
+*.bin
+*.test
+*.cover
+
+# Build
+build/
+dist/
+bin/
+
+# Dependencies
+vendor/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Coverage
+coverage.txt
+
+# Configuration
+~/.persona2/
+
+# Test
+*.test
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Debug
+*.pdb
+*.dSYM
+
+# Temporary
+*.tmp
+*.temp
+*.bak
+*.backup
+persona2

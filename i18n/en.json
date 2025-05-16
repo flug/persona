@@ -1,0 +1,79 @@
+{
+    "init": {
+        "description": "Initialize Persona2 configuration",
+        "help": "Initialize Persona2 configuration by creating the default configuration file.\nIf the file already exists, it will not be modified.\n\nUse the --force option to force reset the configuration.",
+        "success": "Configuration initialized successfully: %s",
+        "exists": "Configuration file already exists: %s",
+        "exists_force": "Configuration already exists at %s. Use --force to overwrite",
+        "error_dir": "Error creating configuration directory: %v",
+        "error_file": "Error creating configuration file: %v",
+        "force_flag": "Force reset configuration",
+        "select_language": "Select your preferred language:",
+        "prompt_choice": "Choose a language (1-%d): ",
+        "invalid_choice": "Invalid choice. Please choose a number between 1 and %d."
+    },
+    "add": {
+        "description": "Add a new profile",
+        "help": "Add a new profile by cloning a Git repository.\nThe profile name can be extracted from the URL if not provided.",
+        "success": "Profile added successfully: %s",
+        "error_exists": "A profile with this name already exists",
+        "error_clone": "Error cloning repository: %v",
+        "error_config": "Error saving configuration: %v",
+        "error_dir": "Error creating directory: %v",
+        "error_profile": "A profile with the name '%s' already exists",
+        "url_required": "The --url parameter is required"
+    },
+    "list": {
+        "description": "List available profiles",
+        "help": "List all available profiles and their information",
+        "title": "Available profiles:",
+        "current": "\nCurrent profile: %s",
+        "profile_info": "- %s (%s)",
+        "aliases": "  Aliases: %v"
+    },
+    "switch": {
+        "description": "Switch to a profile",
+        "help": "Switch to a profile and create symbolic links to its configuration files",
+        "success": "Switched to profile: %s",
+        "error_not_found": "Profile not found: %s",
+        "error_switch": "Error switching profile: %v",
+        "profile_info": "- %s (%s)",
+        "aliases": "  Aliases: %v"
+    },
+    "remove": {
+        "description": "Remove a profile",
+        "help": "Remove a profile and its symbolic links",
+        "confirm": "Are you sure you want to remove profile '%s'? (y/n)",
+        "success": "Profile removed successfully: %s",
+        "error_not_found": "Profile not found: %s",
+        "error_remove": "Error removing profile: %v"
+    },
+    "update": {
+        "description": "Update profiles from their repositories",
+        "help": "Update all profiles or a specific profile from their repositories",
+        "success": "Profile updated successfully: %s",
+        "error_fetch": "Error fetching repository: %v",
+        "error_pull": "Error pulling repository: %v"
+    },
+    "self_update": {
+        "description": "Update Persona2 to the latest version",
+        "long_description": "Downloads and installs the latest version of Persona2 from GitHub.",
+        "error_check_version": "Error checking version: %v",
+        "error_download": "Error downloading new version: %v",
+        "error_remove_old": "Error removing old version: %v",
+        "error_rename": "Error renaming new binary: %v",
+        "up_to_date": "You are already using the latest version: %s",
+        "found_update": "A new version is available: %s -> %s",
+        "success": "Successfully updated to version %s"
+    },
+    "common": {
+        "description": "Git Profile Manager",
+        "long_description": "Persona2 is a Git profile manager that allows you to manage different profiles by cloning repositories.\nProfiles can be easily switched and updated.",
+        "config_file": "path to configuration file",
+        "profile": "Profile name",
+        "url": "Git repository URL",
+        "force": "Force",
+        "yes": "y",
+        "no": "n"
+    }
+}
