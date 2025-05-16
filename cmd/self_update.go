@@ -52,7 +52,7 @@ var selfUpdateCmd = &cobra.Command{
 		}
 
 		// Rename new binary
-		newBinPath := filepath.Join(filepath.Dir(binPath), "persona2_new")
+		newBinPath := filepath.Join(filepath.Dir(binPath), "persona_new")
 		if err := os.Rename(newBinPath, binPath); err != nil {
 			fmt.Println(T("self_update.error_rename", err))
 			return
@@ -72,7 +72,7 @@ func getLatestRelease() (string, error) {
 func downloadRelease(version string) error {
 	// TODO: Implement downloading release from GitHub
 	// For now, create temporary file for testing
-	tempFile := filepath.Join(os.TempDir(), fmt.Sprintf("persona2_%s", version))
+	tempFile := filepath.Join(os.TempDir(), fmt.Sprintf("persona_%s", version))
 	file, err := os.Create(tempFile)
 	if err != nil {
 		return err

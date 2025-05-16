@@ -24,10 +24,10 @@ func init() {
 	// Initialize configuration
 	viper.SetConfigName("config")
 	viper.SetConfigType("json")
-	viper.AddConfigPath("~/.persona2")
+	viper.AddConfigPath("~/.persona")
 
 	// Create the configuration directory if it does not exist
-	configDir := filepath.Join(os.Getenv("HOME"), ".persona2")
+	configDir := filepath.Join(os.Getenv("HOME"), ".persona")
 	if err := os.MkdirAll(configDir, 0755); err != nil {
 		fmt.Printf(T("error.config_dir", map[string]interface{}{"error": err.Error()}))
 		os.Exit(1)

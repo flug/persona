@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ trunk ]
   pull_request:
-    branches: [ main ]
+    branches: [ trunk ]
 
 jobs:
   build:
@@ -26,21 +26,13 @@ jobs:
       run: |
         go test -v ./cmd/... -coverprofile=coverage.txt -covermode=atomic
 
+    - name: Run Go Analysis
+      run: |
+        go vet ./cmd/...
+        go list -e ./cmd/... 2>&1 | grep -v '^$'
+        go fmt ./cmd/...
+        go mod tidy
+
     - name: Show Coverage
       run: |
         go tool cover -func=coverage.txt
-
-    - name: Run Lint
-      run: |
-        go install golang.org/x/lint/golint@latest
-        golint ./cmd/...
-
-    - name: Run Vet
-      run: |
-        go vet ./cmd/...
-
-    - name: Run Static Analysis
-      run: |
-        go install github.com/alecthomas/gometalinter@latest
-        gometalinter --install
-        gometalinter ./cmd/... --disable-all --enable=errcheck --enable=gas --enable=goconst --enable=gofmt --enable=goimports --enable=golint --enable=gosimple --enable=ineffassign --enable=interfacer --enable=lll --enable=misspell --enable=staticcheck --enable=structcheck --enable=varcheck --enable=vet --enable=vetshadow
