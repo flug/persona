@@ -1,4 +1,4 @@
-# Persona2
+# Persona
 
 Git and Configuration Profile Manager
 
@@ -61,18 +61,18 @@ persona update --profile=<profile-name>
 
 To update all profiles:
 ```bash
-persona2 update
+persona update
 ```
 
 This command fetches the latest changes from the repository and updates the local files.
 
 ### Self-Update
-To update Persona2 to the latest version:
+To update Persona to the latest version:
 ```bash
 persona self-update
 ```
 
-This command downloads and installs the latest version of Persona2 from GitHub.
+This command downloads and installs the latest version of Persona from GitHub.
 
 ## Configuration
 
@@ -89,7 +89,7 @@ Each profile is stored in `~/.persona/profiles/<profile-name>` and should contai
 - Dotfiles
 - Any other configuration resources
 
-When switching profiles, Persona2 creates symbolic links from the profile files to their appropriate locations in your home directory.
+When switching profiles, Persona creates symbolic links from the profile files to their appropriate locations in your home directory.
 
 ## Support
 

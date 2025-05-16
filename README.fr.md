@@ -1,10 +1,10 @@
-# Persona2
+# Persona
 
 Gestionnaire de profils Git et de configuration
 
 ## Installation
 
-Pour installer Persona2, utilisez la commande suivante :
+Pour installer Persona, utilisez la commande suivante :
 ```bash
 go install github.com/yourusername/persona/cmd/persona@latest
 ```
@@ -64,18 +64,18 @@ persona update --profile=<nom-profil>
 
 Pour mettre à jour tous les profils :
 ```bash
-persona2 update
+persona update
 ```
 
 Cette commande récupère les dernières modifications depuis le repository et met à jour les fichiers locaux.
 
-### Mettre à jour Persona2
-Pour mettre à jour Persona2 vers la dernière version :
+### Mettre à jour Persona
+Pour mettre à jour Persona vers la dernière version :
 ```bash
 persona self-update
 ```
 
-Cette commande télécharge et installe la dernière version de Persona2 depuis GitHub.
+Cette commande télécharge et installe la dernière version de Persona depuis GitHub.
 
 ## Configuration
 
@@ -92,7 +92,7 @@ Chaque profil est stocké dans `~/.persona/profiles/<nom-profil>` et doit conten
 - Dotfiles
 - Autres ressources de configuration
 
-Lors du changement de profil, Persona2 crée des liens symboliques des fichiers du profil vers leurs emplacements appropriés dans votre dossier personnel.
+Lors du changement de profil, Persona crée des liens symboliques des fichiers du profil vers leurs emplacements appropriés dans votre dossier personnel.
 
 ## Support
 
